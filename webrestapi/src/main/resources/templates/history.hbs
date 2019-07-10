@@ -1,0 +1,36 @@
+{{#partial "content"}}
+
+<a href="/user/"> Back</a><br><br>
+<h3> You can`t  cancel already CONSUMED vacation</h3>
+<style>
+    #navwrapper {
+    width: 50%;}
+    #navlist li {
+    text-align: center;
+    display: inline;
+    list-style-type: none;}
+
+</style>
+<div id="navwrapper">
+    <ul id="navlist">
+      <li style="margin-right: 20px;padding-right: 20px;">ID</li>
+      <li style="margin-right: 29px;padding-right: 29px;">FROM</li>
+      <li style="margin-right: 26px;padding-right: 26px;">TO</li>
+      <li style="margin-right: 4px;padding-right: 4px;">PAID</li>
+      <li>USED</li>
+    </ul>
+</div>
+{{{history}}}
+<br>
+<br>
+  <form action="" method="post">
+     <div class="form-group">
+        <input class="form-control" name="cancel" placeholder="cancel vacation by id" type="number" min="1" required>
+     </div>
+     <br>
+     <div class="form-group">
+        <button class="btn btn-primary btn-block" type="submit"> Submit </button>
+     </div>
+</form>
+{{/partial}}
+{{> base.hbs}}

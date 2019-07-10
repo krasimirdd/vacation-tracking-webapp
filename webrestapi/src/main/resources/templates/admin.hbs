@@ -1,0 +1,30 @@
+{{#partial "content"}}
+    <div style="border:1px solid #2c89ba;border-radius:5px;padding:10px; margin-bottom: 20px">
+        {{{requestList}}}
+    </div>
+    <hr>
+
+    <form action="/admin/" method="post">
+        <div class="form-group">
+            <div>
+                <input name="approval" type="radio" value="Approve" checked> Approve
+                <input name="approval" type="radio" value="Reject"> Reject
+                <input class="form-control" name="requestId" placeholder="Request Id" type="number" min=1 required
+                       style="width:10%;margin-left:20px;">
+                <input class="form-control" name="reason" placeholder="Add Reason" type="text" required
+                       style="width:53%;margin-left:10px;">
+            </div>
+            <br>
+            <div class="form-group">
+                <button class="btn btn-primary btn-block" type="submit"> Submit</button>
+                <a class="logout" href="/logout/"> Logout </a>
+            </div>
+        </div>
+
+    </form>
+    <div class="back">
+        <a href="/admin/reports/"> Reports </a><br><br>
+    </div>
+
+{{/partial}}
+{{> base.hbs}}

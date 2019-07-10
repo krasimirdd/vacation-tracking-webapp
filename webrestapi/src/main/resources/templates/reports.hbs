@@ -1,0 +1,17 @@
+{{#partial "content"}}
+ <form action="/admin/reports/" method="post">
+    <div class="form-group">
+        <div>
+            <input name="vacation_report" type="checkbox" value="VacationReport"> Vacation Report &emsp;
+            <input name="user_report" type="checkbox" value="UsersReport"> Users Report &emsp;&emsp;&emsp;&emsp;
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary btn-block" type="submit"> Generate </button>
+        </div>
+    </div>
+</form>
+<div class="back">
+<a href="/admin/"> Back</a><br><br>
+</div>
+{{/partial}}
+{{> base.hbs}}

@@ -1,0 +1,31 @@
+{{#partial "content"}}
+ <script>
+      function copyToClipboard(element) {
+          let textarea = document.getElementById(element);
+          textarea.select();
+          document.execCommand("copy");
+      }
+</script>
+{{#if vacationLink}}
+<div>
+<textarea id="vac" style="width:85%;height:40%" readonly="true">{{vacationLink}}</textarea> <button onclick="copyToClipboard('vac')">Copy</button>
+</div>
+{{else}}
+<div>
+<textarea id="vac" style="width:85%;height:40%" readonly="true">NO INFO</textarea> <button onclick="copyToClipboard('vac')">Copy</button>
+</div>
+{{/if}}
+{{#if userLink}}
+<div>
+<textarea id="usr" style="width:85%;height:40%" readonly="true">{{userLink}}</textarea>  <button onclick="copyToClipboard('usr')">Copy</button>
+</div>
+{{else}}
+<div>
+<textarea id="usr" style="width:85%;height:40%" readonly="true">NO INFO</textarea> <button onclick="copyToClipboard('usr')">Copy</button>
+</div>
+{{/if}}
+<div class="back">
+<a href="/admin/reports/"> Back</a><br><br>
+</div>
+{{/partial}}
+{{> base.hbs}}

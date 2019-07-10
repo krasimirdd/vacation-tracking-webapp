@@ -1,0 +1,26 @@
+{{#partial "content"}}
+<h2> Hello user <h1>{{username}}</h1></h2>
+    <form action="/user/" method="post">
+
+<p>From : <input type="date" name="from" required></p>
+<p>To : <input type="date" name="to" required></p>
+
+<br>
+<br>
+<div>
+    <input  name="type" type="checkbox" value="paid"> Paid <br>
+</div>
+<div class="form-group" style="text-align: center;">
+    <button class="btn btn-primary btn-block" type="submit"> Submit </button>
+</div>
+
+<p> Days available : {{available}}</p>
+<p> Days consumed : {{consumed}}</p>
+
+<a href={{uid}}> History </a>
+
+{{/partial}}
+{{#partial "footer"}}
+    <a class="logout" href="/logout/"> Logout </a>
+{{/partial}}
+{{> base.hbs}}

@@ -1,0 +1,40 @@
+{{#block "header"}}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{#block "title"}}Welcome{{/block}}</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+      <link rel="stylesheet" href="/resources/demos/style.css">
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script>
+      $( function() {
+        $( ".datepicker" ).datepicker({
+            dateFormat: "yy-mm-dd"
+            });
+      });
+      $( "#datepicker" ).datepicker( "option", "dateFormat", "yy-mm-dd" );
+
+  </script>
+
+</head>
+<body>
+    <div class="page">
+        {{#if flash_message}}
+            <p id="flash-message">{{ flash_message }}</p>
+        {{/if}}
+{{/block}}
+
+{{#block "content"}}{{/block}}
+
+{{#block "footer"}}
+    </div>
+
+<div class="footer">
+    <p><i> created by: <b>Krasimir Dimitrov</b> && <b>Yani Mihaylov</b> </i></p>
+</div>
+    </body>
+    </html>
+{{/block}}
