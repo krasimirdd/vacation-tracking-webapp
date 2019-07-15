@@ -21,6 +21,7 @@ public class AdminGetRoute implements TemplateViewRoute {
 	private final VacationServiceImpl vacationService;
 
 	public AdminGetRoute() {
+
 		userService = new UserServiceImpl();
 		vacationService = new VacationServiceImpl();
 	}
@@ -36,6 +37,7 @@ public class AdminGetRoute implements TemplateViewRoute {
 		List<User> users = userService.getUsersByTeamID(teamID);
 		if (users == null) {
 			model.put("requestList", NO_REQUESTS);
+			model.put(FLASH_MESSAGE_KEY, App.getFlashMessage(request));
 			return new ModelAndView(model, "admin.hbs");
 		}
 
